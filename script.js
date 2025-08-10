@@ -1,4 +1,4 @@
-// anul curent
+// year
 document.getElementById('y')?.textContent = new Date().getFullYear();
 
 // toggle detalii servicii
@@ -19,7 +19,7 @@ window.addEventListener('scroll', ()=>{
 });
 toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
-// formular -> mailto
+// mailto form
 function openMail(e){
   e.preventDefault();
   const nume = document.getElementById('nume').value.trim();
