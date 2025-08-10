@@ -1,231 +1,230 @@
 <!doctype html>
 <html lang="ro">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdPulse — Portfolio</title>
-<meta name="description" content="Social Media, Google Ads (basic), Content & Landing Pages.">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AdPulse — Portofoliu</title>
+<meta name="description" content="Social Media, Google Ads (basic), Content & Landing Pages." />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
+/* ====== PALETA NOUĂ: PORTOCALIU + ALB, BUTOANE ALBASTRE ====== */
 :root{
-  /* fundal & text */
-  --bg:#0c0c10; /* charcoal */
-  --panel:#14141b; /* panou */
-  --ink:#f4f6ff; /* text principal */
-  --muted:#aab1c2; /* text secundar */
-  --line:rgba(255,255,255,.08);
-
-  /* accente */
-  --mint:#2ee6a6;
-  --coral:#ff6b6b;
+  --bg:#ff7f32; /* portocaliu fundal */
+  --bg-soft:#ffe0c2; /* portocaliu deschis */
+  --panel:#ffffff; /* panouri albe */
+  --ink:#1f2937; /* text */
+  --muted:#6b7280; /* text secundar */
+  --line:#e5e7eb; /* contur panouri */
+  --blue:#0077b6; /* butoane */
+  --blue-2:#023e8a; /* hover butoane */
 }
 *{box-sizing:border-box}
-html,body{margin:0;background:linear-gradient(180deg,#0c0c10 0%,#0f1116 60%,#0c0c10 100%);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
-a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
 
-/* LAYOUT */
-.app{display:grid;grid-template-columns:260px 1fr;min-height:100dvh}
-.sidebar{position:sticky;top:0;height:100dvh;padding:22px;background:linear-gradient(180deg,#0f1015,#0c0c10);border-right:1px solid var(--line)}
-.logo{display:flex;align-items:center;gap:10px;font-weight:800}
-.dot{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--mint),var(--coral));box-shadow:0 0 18px var(--mint)}
-.menu{margin:18px 0 14px;display:grid;gap:10px}
-.menu a{padding:10px 12px;border-radius:10px;border:1px solid transparent}
-.menu a.active,.menu a:hover{background:linear-gradient(135deg, rgba(46,230,166,.18), rgba(255,107,107,.18));border-color:rgba(46,230,166,.35)}
-.badge{display:inline-flex;gap:8px;align-items:center;background:rgba(46,230,166,.12);border:1px solid rgba(46,230,166,.35);color:#dbffef;border-radius:999px;padding:6px 10px;font-weight:700;font-size:12px}
-.cta{margin-top:auto;width:100%;background:linear-gradient(135deg,var(--mint),var(--coral));color:#0d1117;border:none;border-radius:12px;padding:12px 14px;font-weight:800}
-.sm{display:flex;gap:12px;margin-top:12px}
+/* ====== LAYOUT TOP NAV ====== */
+.header{position:sticky;top:0;background:var(--panel);border-bottom:1px solid var(--line);z-index:20}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;letter-spacing:.2px}
+.menu{display:flex;gap:10px}
+.menu a{padding:10px 12px;border-radius:10px}
+.menu a:hover{background:var(--bg-soft)}
+.btn{padding:10px 14px;border-radius:10px;border:1px solid var(--line);font-weight:700}
+.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn.primary:hover{background:var(--blue-2);border-color:var(--blue-2)}
+.btn.ghost{color:var(--blue);background:#e0f2fe;border-color:#bfdbfe}
+.btn.tiny{padding:8px 12px;border-radius:8px}
 
-/* MAIN */
-.main{padding:26px;display:grid;gap:26px}
-.section{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:18px;padding:18px}
+/* ====== SECTIUNI ====== */
+.section{background:var(--panel);border:1px solid var(--line);border-radius:14px;margin:16px auto;padding:18px;max-width:1100px}
 h1{margin:0 0 6px;font-size:28px;font-weight:800}
 h2{margin:0 0 10px;font-size:22px}
 p.lead{color:var(--muted);max-width:780px}
 
 /* GRID & CARDS */
-.row{display:grid;gap:16px}
-.grid{grid-template-columns:repeat(12,1fr)}
-.card{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:.25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 16px 28px rgba(0,0,0,.35)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+.card{grid-column:span 12;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);transition:.2s}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(0,0,0,.08)}
 .card .body{padding:14px}
 h3{margin:0 0 6px;font-size:18px}
 
-/* THUMBS (POZE MICI) */
-.thumb{width:100%;height:140px;object-fit:cover;background:#0d1426;border-bottom:1px solid var(--line)}
-.thumb:hover{filter:brightness(1.08);transform:scale(1.01)}
+/* THUMBNAILS MICI */
+.thumb{width:100%;height:120px;object-fit:cover;background:#f1f5f9;border-bottom:1px solid var(--line)}
+.thumb:hover{filter:brightness(1.06)}
 
 /* KPI */
-.kpis{grid-template-columns:repeat(3,1fr)}
-.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
-.kpi .n{font-size:26px;font-weight:800}
+.kpis{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.kpi{border:1px solid var(--line);border-radius:10px;padding:12px;background:#fff8f0;text-align:center}
+.kpi .n{font-size:24px;font-weight:800}
 .kpi small{color:var(--muted)}
 
-/* Buttons */
-.btn{padding:9px 12px;border-radius:10px;border:1px solid var(--line);display:inline-flex;gap:8px;align-items:center;font-weight:700}
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{border:none;background:linear-gradient(135deg,var(--mint),var(--coral));color:#0d1117}
-.btn.ghost{color:#cfe7ff}
-
 /* Chips */
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
-.chips span{border:1px solid rgba(255,255,255,.14);padding:6px 10px;border-radius:999px;color:#b6c7e4;font-size:12px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chips span{border:1px solid var(--line);padding:6px 10px;border-radius:999px;color:#374151;background:#f9fafb;font-size:12px}
 
 /* CONTACT */
 .form{display:grid;gap:10px}
-.form input,.form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#0b111b;color:var(--ink)}
+.form input,.form textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink)}
 
-/* REVEAL on scroll */
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .5s ease, transform .5s ease}
-.reveal.show{opacity:1;transform:none}
+/* FOOTER */
+.footer{background:var(--panel);border-top:1px solid var(--line);margin-top:18px}
+.footer .inner{display:flex;align-items:center;justify-content:space-between;gap:10px;height:60px}
 
 /* LIGHTBOX */
-.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:60}
-.lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;border:1px solid var(--line)}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;z-index:50}
+.lightbox img{max-width:92vw;max-height:88vh;border-radius:12px;border:6px solid #fff}
 .lightbox.visible{display:flex}
 
-/* Responsive */
-@media(min-width:900px){ .grid .card{grid-column:span 4} }
-@media(max-width:860px){ .app{grid-template-columns:1fr} .sidebar{position:relative;height:auto} }
+/* RESPONSIVE */
+@media(min-width:760px){ .grid .card{grid-column:span 4} }
 </style>
 </head>
 <body>
 
-<div class="app">
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="logo"><span class="dot"></span> AdPulse</div>
-    <div class="badge">📍 Brașov • disponibil remote</div>
+<!-- ====== NAVBAR ====== -->
+<header class="header">
+  <div class="container nav">
+    <div class="brand">AdPulse</div>
     <nav class="menu">
-      <a href="#overview" class="active">📌 Overview</a>
-      <a href="#servicii">🧰 Servicii</a>
-      <a href="#proiecte">🗂 Portofoliu</a>
-      <a href="#contact">✉️ Contact</a>
+      <a href="#overview">Overview</a>
+      <a href="#servicii">Servicii</a>
+      <a href="#proiecte">Proiecte</a>
+      <a class="btn primary" href="#contact">Cere ofertă</a>
     </nav>
-    <div class="sm">
+  </div>
+</header>
+
+<!-- ====== OVERVIEW ====== -->
+<section id="overview" class="section">
+  <h1>Salut, sunt Marian — AdPulse</h1>
+  <p class="lead">Social media, Google Ads (basic), content & landing pages. Execuție rapidă, claritate, rapoarte simple în GA4.</p>
+  <div class="kpis" style="margin-top:12px">
+    <div class="kpi"><div class="n" data-kpi="40">0%</div><small>reach pe postări</small></div>
+    <div class="kpi"><div class="n" data-kpi="25">0%</div><small>CTR campanii demo</small></div>
+    <div class="kpi"><div class="n" data-kpi="90">0</div><small>scor PageSpeed</small></div>
+  </div>
+  <div class="chips" style="margin-top:8px">
+    <span>Google Ads</span><span>Canva</span><span>Photoshop Express</span><span>HTML</span><span>CSS</span><span>JS</span><span>GA4</span><span>CRM</span>
+  </div>
+</section>
+
+<!-- ====== SERVICII ====== -->
+<section id="servicii" class="section">
+  <h2>Servicii</h2>
+  <div class="grid">
+    <article class="card">
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=600&auto=format&fit=crop"
+           alt="Google Ads dashboard" onclick="openLightbox(this.src)">
+      <div class="body">
+        <h3>Google Ads (basic)</h3>
+        <p>Search/Display, negative, extensii, rapoarte săptămânale.</p>
+        <a class="btn tiny primary" href="#" onclick="alert('Adaugă link spre raport demo.');return false;">Raport demo</a>
+        <a class="btn tiny ghost" href="#" onclick="alert('Adaugă keywords.');return false;">Keywords</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=600&auto=format&fit=crop"
+           alt="Plan conținut social media" onclick="openLightbox(this.src)">
+      <div class="body">
+        <h3>Social Media</h3>
+        <p>Calendar, vizual + copy, publicare, raport reach/engagement.</p>
+        <a class="btn tiny primary" href="#" onclick="alert('Adaugă link spre calendar Sheets.');return false;">Calendar</a>
+        <a class="btn tiny ghost" href="#" onclick="alert('Adaugă kit imagini.');return false;">Kit vizual</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- >>> POZA CU PROBLEMĂ: are fallback garantat dacă nu se încarcă <<< -->
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+           alt="Landing page pe laptop" onclick="openLightbox(this.src)"
+           onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;120&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23f1f5f9&quot;/><text x=&quot;50%&quot; y=&quot;55%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, Arial&quot; font-size=&quot;18&quot; fill=&quot;%23374151&quot;>Landing demo</text></svg>';">
+      <div class="body">
+        <h3>Landing Pages</h3>
+        <p>HTML/CSS/JS, CTA vizibil, Lighthouse 90+, GA4 events.</p>
+        <a class="btn tiny primary" href="#" onclick="alert('Adaugă link spre landing.');return false;">Deschide</a>
+        <a class="btn tiny ghost" href="#" onclick="alert('Adaugă design Figma/Canva.');return false;">Design</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ====== PROIECTE ====== -->
+<section id="proiecte" class="section">
+  <h2>Proiecte (demo)</h2>
+  <p class="lead">Imagini mici; click pe poză pentru mărire (lightbox).</p>
+  <div class="grid">
+    <article class="card">
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop"
+           alt="Raport Ads vizual" onclick="openLightbox(this.src)">
+      <div class="body">
+        <h3>Campanie Ads — magazin online</h3>
+        <p>Structură pe ad groups, negative, extensii sitelink/callout.</p>
+        <div class="chips"><span>CTR</span><span>CPC</span><span>Conv.</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <!-- aceeași imagine folosită și aici, cu fallback -->
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
+           alt="Landing modern" onclick="openLightbox(this.src)"
+           onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;120&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23f1f5f9&quot;/><text x=&quot;50%&quot; y=&quot;55%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, Arial&quot; font-size=&quot;18&quot; fill=&quot;%23374151&quot;>Landing demo</text></svg>';">
+      <div class="body">
+        <h3>Landing „lead gen”</h3>
+        <p>Layout clar, CTA sticky, evenimente GA4 configurate.</p>
+        <div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <img class="thumb" loading="lazy"
+           src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=600&auto=format&fit=crop"
+           alt="Calendar & conținut" onclick="openLightbox(this.src)">
+      <div class="body">
+        <h3>Calendar social — 30 postări</h3>
+        <p>Template + copy scurt, CTA, hashtag-uri. Export Sheets.</p>
+        <div class="chips"><span>Plan</span><span>Copy</span><span>Hashtag</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ====== CONTACT ====== -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="grid" style="grid-template-columns:1.2fr .8fr">
+    <form class="form" onsubmit="sendMail(event)">
+      <input id="nume" type="text" placeholder="Nume" required>
+      <input id="email" type="email" placeholder="Email" required>
+      <textarea id="msg" rows="5" placeholder="Mesajul tău" required></textarea>
+      <button class="btn primary" type="submit">Trimite</button>
+    </form>
+    <div style="border:1px solid var(--line);border-radius:12px;padding:14px;background:#fff">
+      <p><strong>Email:</strong> tomita.pirvu01@gmail.com</p>
+      <p><strong>Telefon:</strong> 0784 479 445</p>
+      <p><strong>Locație:</strong> Brașov</p>
+      <p style="color:var(--muted)">Răspund în max. 24h cu o propunere clară.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer class="footer">
+  <div class="container inner">
+    <div>© <span id="y"></span> AdPulse • Brașov</div>
+    <div class="menu">
       <a href="#" onclick="alert('Adaugă GitHub');return false;">GitHub</a>
       <a href="#" onclick="alert('Adaugă LinkedIn');return false;">LinkedIn</a>
     </div>
-    <button class="cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Cere ofertă</button>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="main">
-    <!-- Overview -->
-    <section id="overview" class="section reveal">
-      <h1>Salut, sunt Marian — AdPulse</h1>
-      <p class="lead">Social media, Google Ads (basic), content & landing pages. Focus pe claritate, execuție rapidă și măsurare în GA4.</p>
-      <div class="row kpis" style="margin-top:14px">
-        <div class="kpi"><div class="n" data-kpi="40">0%</div><small>reach pe postări</small></div>
-        <div class="kpi"><div class="n" data-kpi="25">0%</div><small>CTR campanii demo</small></div>
-        <div class="kpi"><div class="n" data-kpi="90">0</div><small>scor PageSpeed</small></div>
-      </div>
-      <div class="chips"><span>Google Ads</span><span>Canva</span><span>Photoshop Express</span><span>HTML</span><span>CSS</span><span>JS</span><span>GA4</span><span>CRM</span></div>
-    </section>
-
-    <!-- Servicii -->
-    <section id="servicii" class="section reveal">
-      <h2>Servicii</h2>
-      <div class="row grid">
-        <article class="card">
-          <img class="thumb" loading="lazy"
-               src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=600&auto=format&fit=crop"
-               alt="Google Ads dashboard" onclick="openLightbox(this.src)">
-          <div class="body">
-            <h3>Google Ads (basic)</h3>
-            <p>Search/Display, negative, extensii, rapoarte simple.</p>
-            <a class="btn tiny primary" href="#" onclick="alert('Pune link spre raport demo.');return false;">Raport demo</a>
-            <a class="btn tiny ghost" href="#" onclick="alert('Pune keywords.');return false;">Keywords</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="thumb" loading="lazy"
-     src="https://images.unsplash.com/photo-1529336953121-c6ae529b5d0f?q=80&w=600&auto=format&fit=crop"
-     alt="Landing modern"
-     onclick="openLightbox(this.src)"
-     onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;600&quot; height=&quot;140&quot;><rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;%23212534&quot;/><text x=&quot;50%&quot; y=&quot;55%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot; font-family=&quot;Inter, Arial&quot; font-size=&quot;20&quot; fill=&quot;%23cfe7ff&quot;>Landing demo</text></svg>';">
-          <div class="body">
-            <h3>Social Media</h3>
-            <p>Calendar, vizual + copy, publicare, raport reach/engagement.</p>
-            <a class="btn tiny primary" href="#" onclick="alert('Pune link spre calendar Sheets.');return false;">Calendar</a>
-            <a class="btn tiny ghost" href="#" onclick="alert('Pune kit imagini.');return false;">Kit vizual</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="thumb" loading="lazy"
-               src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop"
-               alt="Landing page pe laptop" onclick="openLightbox(this.src)">
-          <div class="body">
-            <h3>Landing Pages</h3>
-            <p>HTML/CSS/JS, CTA vizibil, Lighthouse 90+, GA4 events.</p>
-            <a class="btn tiny primary" href="#" onclick="alert('Pune link spre landing.');return false;">Deschide</a>
-            <a class="btn tiny ghost" href="#" onclick="alert('Pune design Figma/Canva.');return false;">Design</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Portofoliu -->
-    <section id="proiecte" class="section reveal">
-      <h2>Portofoliu (demo)</h2>
-      <p class="lead">Thumbnails mici cu lightbox — click pe imagine pentru mărire.</p>
-      <div class="row grid">
-        <article class="card">
-          <img class="thumb" loading="lazy"
-               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=600&auto=format&fit=crop"
-               alt="Ads report vizual" onclick="openLightbox(this.src)">
-          <div class="body">
-            <h3>Campanie Ads — magazin online</h3>
-            <p>Structură pe ad groups, negative, extensii sitelink/callout.</p>
-            <div class="chips"><span>CTR</span><span>CPC</span><span>Conv.</span></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="thumb" loading="lazy"
-               src="https://images.unsplash.com/photo-1529336953121-c6ae529b5d0f?q=80&w=600&auto=format&fit=crop"
-               alt="Landing modern" onclick="openLightbox(this.src)">
-          <div class="body">
-            <h3>Landing „lead gen”</h3>
-            <p>Layout clar, CTA sticky, evenimente GA4 configurate.</p>
-            <div class="chips"><span>HTML</span><span>CSS</span><span>JS</span></div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img class="thumb" loading="lazy"
-               src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=600&auto=format&fit=crop"
-               alt="Calendar & conținut" onclick="openLightbox(this.src)">
-          <div class="body">
-            <h3>Calendar social — 30 postări</h3>
-            <p>Template + copy scurt, CTA, hashtag-uri. Export Sheets.</p>
-            <div class="chips"><span>Plan</span><span>Copy</span><span>Hashtag</span></div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section reveal">
-      <h2>Contact</h2>
-      <div class="row" style="grid-template-columns:1.2fr .8fr">
-        <form class="form" onsubmit="sendMail(event)">
-          <input id="nume" type="text" placeholder="Nume" required>
-          <input id="email" type="email" placeholder="Email" required>
-          <textarea id="msg" rows="5" placeholder="Mesajul tău" required></textarea>
-          <button class="btn primary" type="submit">Trimite</button>
-        </form>
-        <div style="border:1px solid var(--line);border-radius:14px;padding:14px;background:var(--panel)">
-          <p><strong>Email:</strong> tomita.pirvu01@gmail.com</p>
-          <p><strong>Telefon:</strong> 0784 479 445</p>
-          <p><strong>Locație:</strong> Brașov</p>
-          <p style="color:var(--muted)">Răspund în max. 24h cu o propunere clară.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-</div>
+  </div>
+</footer>
 
 <!-- LIGHTBOX -->
 <div id="lightbox" class="lightbox" onclick="closeLightbox()">
@@ -233,26 +232,14 @@ h3{margin:0 0 6px;font-size:18px}
 </div>
 
 <script>
-/* nav active */
-document.querySelectorAll('.menu a').forEach(a=>{
-  a.addEventListener('click',()=>{ document.querySelectorAll('.menu a').forEach(x=>x.classList.remove('active')); a.classList.add('active'); });
-});
-
-/* KPI counters */
+/* an anim pentru KPI */
 document.querySelectorAll('[data-kpi]').forEach(el=>{
-  const target = parseInt(el.dataset.kpi,10); let n=0; const step = Math.max(1, Math.round(target/40));
-  const int = setInterval(()=>{ n+=step; if(n>=target){n=target;clearInterval(int)}
-    el.textContent = (el===document.querySelector('[data-kpi="90"]')) ? n : n + '%';
+  const target=parseInt(el.dataset.kpi,10); let n=0; const step=Math.max(1,Math.round(target/40));
+  const int=setInterval(()=>{ n+=step; if(n>=target){n=target;clearInterval(int)}
+    el.textContent=(el===document.querySelector('[data-kpi="90"]'))?n:n+'%';
   },30);
 });
-
-/* reveal on scroll */
-const io = new IntersectionObserver(ents=>{
-  ents.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target);} });
-},{threshold:.15});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-/* mailto */
+/* mailto simplu */
 function sendMail(e){
   e.preventDefault();
   const n=document.getElementById('nume').value.trim();
@@ -261,10 +248,11 @@ function sendMail(e){
   const body=encodeURIComponent(`Nume: ${n}\nEmail: ${em}\n\n${m}`);
   window.location.href=`mailto:tomita.pirvu01@gmail.com?subject=AdPulse%20—%20Cerere%20ofertă&body=${body}`;
 }
-
 /* lightbox */
 function openLightbox(src){ const lb=document.getElementById('lightbox'); document.getElementById('lightbox-img').src=src; lb.classList.add('visible'); }
 function closeLightbox(){ document.getElementById('lightbox').classList.remove('visible'); }
+/* year */
+document.getElementById('y').textContent=new Date().getFullYear();
 </script>
 </body>
 </html>
