@@ -74,53 +74,41 @@
   </section>
 
   <!-- PROIECTE -->
-  <section id="proiecte" class="section">
-    <div class="container">
-      <h2>Proiecte demonstrative</h2>
-      <p class="sub">Linkurile pot fi înlocuite cu exemple reale (GitHub Pages / PDF / Google Sheets).</p>
+<section id="proiecte" class="section">
+  <div class="container">
+    <h2>Proiecte demonstrative</h2>
+    <p class="sub">Thumbnails mici, info scurt, linkuri directe.</p>
 
-      <div class="grid projects">
-        <article class="card proj">
-          <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1200&auto=format&fit=crop" alt="Dashboard Ads">
-          <div class="card-body">
-            <span class="tag">Google Ads</span>
-            <h3>Magazin online — campanie Search + Display</h3>
-            <p>Structură pe grupuri de anunțuri, negative, extensii sitelink/callout. Raport săptămânal.</p>
-            <div class="row">
-              <a class="btn tiny" href="#" onclick="alert('Pune link spre raportul tău demo (Sheets/PDF).');return false;">Raport demo</a>
-              <a class="btn tiny ghost" href="#" onclick="alert('Pune link spre lista de cuvinte cheie.');return false;">Keywords</a>
-            </div>
-          </div>
-        </article>
+    <div class="cases" style="grid-template-columns:repeat(12,1fr);gap:16px">
+      <article class="case" style="grid-column:span 4">
+        <img class="thumb" loading="lazy"
+          src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=600&auto=format&fit=crop"
+          alt="Google Ads dashboard">
+        <h3 style="margin:6px 0 4px">Campanie Google Ads — demo</h3>
+        <small>Search + Display • raport săptămânal</small><br>
+        <a class="btn tiny" href="#" onclick="alert('Pune link spre raport PDF/Sheets.');return false;">Vezi raport</a>
+      </article>
 
-        <article class="card proj">
-          <img src="https://images.unsplash.com/photo-1529336953121-c6ae529b5d0f?q=80&w=1200&auto=format&fit=crop" alt="Website pe laptop">
-          <div class="card-body">
-            <span class="tag">Landing</span>
-            <h3>Landing „lead gen” — conversie formular</h3>
-            <p>Page layout clar, CTA sticky, elemente de încredere și evenimente GA4 configurate.</p>
-            <div class="row">
-              <a class="btn tiny" href="#" onclick="alert('Link spre landing publicat.');return false;">Deschide</a>
-              <a class="btn tiny ghost" href="#" onclick="alert('Link spre Figma/Canva.');return false;">Design</a>
-            </div>
-          </div>
-        </article>
+      <article class="case" style="grid-column:span 4">
+        <img class="thumb" loading="lazy"
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=600&auto=format&fit=crop"
+          alt="Landing page pe laptop">
+        <h3 style="margin:6px 0 4px">Landing page — lead gen</h3>
+        <small>HTML/CSS/JS • GA4 events</small><br>
+        <a class="btn tiny" href="#" onclick="alert('Pune link spre landing publicat.');return false;">Deschide</a>
+      </article>
 
-        <article class="card proj">
-          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Social dashboard">
-          <div class="card-body">
-            <span class="tag">Content</span>
-            <h3>Calendar Social — 30 postări/lună</h3>
-            <p>Template grafic + copy scurt, CTA, hashtag-uri. Export CSV/Sheets, organizat pe săptămâni.</p>
-            <div class="row">
-              <a class="btn tiny" href="#" onclick="alert('Link spre Google Sheet.');return false;">Calendar</a>
-              <a class="btn tiny ghost" href="#" onclick="alert('Link spre pachet imagini.');return false;">Kit vizual</a>
-            </div>
-          </div>
-        </article>
-      </div>
+      <article class="case" style="grid-column:span 4">
+        <img class="thumb" loading="lazy"
+          src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=600&auto=format&fit=crop"
+          alt="Plan conținut social">
+        <h3 style="margin:6px 0 4px">Calendar Social — 30 postări</h3>
+        <small>Template + copy scurt • CSV/Sheets</small><br>
+        <a class="btn tiny" href="#" onclick="alert('Pune link spre Google Sheet/CSV.');return false;">Vezi calendar</a>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CONTACT -->
   <section id="contact" class="section">
