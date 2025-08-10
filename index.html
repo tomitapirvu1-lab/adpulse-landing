@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdPulse - Marketing Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">AdPulse</div>
+    <nav>
+        <a href="#home">Acasă</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#proiecte">Proiecte</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Creștem afacerea ta online</h1>
+    <p>Marketing digital, campanii Google Ads și social media management.</p>
+    <button class="cta" onclick="scrollToSection('contact')">Solicită ofertă</button>
+</section>
+
+<section id="servicii" class="services">
+    <h2>Serviciile Noastre</h2>
+    <div class="service-card">
+        <h3>Google Ads</h3>
+        <p>Campanii optimizate pentru rezultate maxime.</p>
+        <button onclick="showDetails('ads')">Detalii</button>
+        <div class="details" id="details-ads">Setare, monitorizare și optimizare campanii.</div>
+    </div>
+    <div class="service-card">
+        <h3>Social Media</h3>
+        <p>Creăm conținut atractiv și postări regulate.</p>
+        <button onclick="showDetails('social')">Detalii</button>
+        <div class="details" id="details-social">Gestionare conturi Facebook, Instagram, LinkedIn.</div>
+    </div>
+    <div class="service-card">
+        <h3>SEO</h3>
+        <p>Optimizăm site-ul pentru a urca în Google.</p>
+        <button onclick="showDetails('seo')">Detalii</button>
+        <div class="details" id="details-seo">Analiză, cuvinte cheie, link building.</div>
+    </div>
+</section>
+
+<section id="proiecte" class="projects">
+    <h2>Proiecte Realizate</h2>
+    <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Proiect 1">
+        <p>Campanie Google Ads pentru magazin online.</p>
+    </div>
+    <div class="project-card">
+        <img src="https://via.placeholder.com/300x200" alt="Proiect 2">
+        <p>Creare website și pagini social media pentru firmă locală.</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contactează-ne</h2>
+    <form>
+        <input type="text" placeholder="Nume" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Mesajul tău" required></textarea>
+        <button type="submit">Trimite</button>
+    </form>
+</section>
+
+<button id="scrollTop" onclick="scrollToTop()">↑ Sus</button>
+
+<script src="script.js"></script>
+</body>
+</html>
