@@ -10,24 +10,24 @@
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap">
-    <div class="brand"><span class="dot"></span> AdPulse</div>
+<header class="top">
+  <div class="container bar">
+    <div class="brand">AdPulse</div>
     <nav class="nav">
       <a href="#servicii">Servicii</a>
       <a href="#proiecte">Proiecte</a>
-      <a class="btn cta" href="#contact">Cere ofertă</a>
+      <a class="btn primary" href="#contact">Cere ofertă</a>
     </nav>
   </div>
 </header>
 
 <main>
-  <!-- HERO MINIMAL (fără imagine mare) -->
+  <!-- HERO MINIMAL (fără imagini mari) -->
   <section class="hero">
-    <div class="wrap">
-      <span class="badge">📈 Social Media • Google Ads • Content</span>
-      <h1>Creștem ceea ce contează, fără zgomot.</h1>
-      <p class="sub">Pagini rapide, reclame țintite și conținut clar. Totul măsurat în GA4.</p>
+    <div class="container">
+      <span class="badge">📈 Social Media • Google Ads (basic) • Content</span>
+      <h1>Creștem ceea ce contează, pe bune.</h1>
+      <p class="sub">Pagini rapide, reclame țintite și conținut clar. Raportare simplă în GA4.</p>
       <div class="actions">
         <a class="btn primary" href="#contact">Solicită propunere</a>
         <a class="btn ghost" href="#proiecte">Vezi portofoliu</a>
@@ -37,19 +37,21 @@
 
   <!-- SERVICII -->
   <section id="servicii" class="section">
-    <div class="wrap">
+    <div class="container">
       <h2>Servicii</h2>
       <div class="grid">
         <article class="card">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Google Ads"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23e6fff4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='18' fill='%2310b981'>Google Ads</text></svg>">
           <h3>Google Ads (basic)</h3>
-          <p>Search/Display, negative, extensii, rapoarte simple.</p>
+          <p>Search/Display, negative, extensii, rapoarte săptămânale.</p>
           <button class="btn tiny" data-toggle="#ads">Detalii</button>
           <div class="reveal" id="ads">Structuri pe obiective, track conversii, optimizare săptămânală.</div>
         </article>
 
         <article class="card">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Social Media"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23eef4ff'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='18' fill='%231e293b'>Social Media</text></svg>">
           <h3>Social Media</h3>
           <p>Calendar, vizual + copy, publicare, raport reach/engagement.</p>
           <button class="btn tiny" data-toggle="#sm">Detalii</button>
@@ -57,7 +59,8 @@
         </article>
 
         <article class="card">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Landing Page"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23fff7ed'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='18' fill='%236b3f00'>Landing Page</text></svg>">
           <h3>Landing Pages</h3>
           <p>HTML/CSS/JS, CTA vizibil, Lighthouse 90+, GA4 events.</p>
           <button class="btn tiny" data-toggle="#lp">Detalii</button>
@@ -67,18 +70,18 @@
     </div>
   </section>
 
-  <!-- PROIECTE cu THUMBNAILS MICI -->
+  <!-- PROIECTE (thumbnails mici) -->
   <section id="proiecte" class="section">
-    <div class="wrap">
+    <div class="container">
       <h2>Proiecte demonstrative</h2>
-      <p class="sub">Thumbnails mici, info scurt, linkuri directe.</p>
-
+      <p class="sub">Imagini mici, info scurt, linkuri directe.</p>
       <div class="grid">
         <article class="card compact">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Ads Report"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23f0fdf4'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%230b7a43'>Raport Ads</text></svg>">
           <span class="tag">Google Ads</span>
           <h3>Magazin online — Search + Display</h3>
-          <p>Structură pe ad groups, negative, extensii sitelink/callout.</p>
+          <p>Ad groups, negative, extensii sitelink/callout.</p>
           <div class="row">
             <a class="btn tiny" href="#" onclick="alert('Pune link spre raport Sheets/PDF.');return false;">Raport demo</a>
             <a class="btn tiny ghost" href="#" onclick="alert('Pune link spre keywords.');return false;">Keywords</a>
@@ -86,7 +89,8 @@
         </article>
 
         <article class="card compact">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1529336953121-c6ae529b5d0f?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Landing"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23eef2ff'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%232256d6'>Landing Demo</text></svg>">
           <span class="tag">Landing</span>
           <h3>Lead gen — conversie formular</h3>
           <p>Layout clar, CTA sticky, GA4 events configurate.</p>
@@ -97,10 +101,11 @@
         </article>
 
         <article class="card compact">
-          <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=400&auto=format&fit=crop')"></div>
+          <img class="thumb" alt="Calendar"
+               src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='200'><rect width='100%' height='100%' fill='%23fff1f2'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='Inter' font-size='16' fill='%23be123c'>Calendar Social</text></svg>">
           <span class="tag">Content</span>
           <h3>Calendar Social — 30 postări</h3>
-          <p>Template grafic + copy scurt, CTA, hashtag-uri. Export CSV/Sheets.</p>
+          <p>Template + copy scurt, CTA, hashtag-uri. Export CSV/Sheets.</p>
           <div class="row">
             <a class="btn tiny" href="#" onclick="alert('Link spre Sheet.');return false;">Vezi calendar</a>
             <a class="btn tiny ghost" href="#" onclick="alert('Link spre kit imagini.');return false;">Kit vizual</a>
@@ -112,7 +117,7 @@
 
   <!-- CONTACT -->
   <section id="contact" class="section">
-    <div class="wrap">
+    <div class="container">
       <h2>Contact</h2>
       <div class="contact">
         <form class="form" onsubmit="openMail(event)">
@@ -132,7 +137,7 @@
 </main>
 
 <footer class="foot">
-  <div class="wrap foot-in">
+  <div class="container foot-in">
     <div>© <span id="y"></span> AdPulse • Brașov</div>
     <div class="sm">
       <a href="#" onclick="alert('Adaugă link GitHub.');return false;">GitHub</a>
