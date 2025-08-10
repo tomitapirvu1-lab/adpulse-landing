@@ -118,3 +118,30 @@ nav a {
     cursor: pointer;
     display: none;
 }
+.project-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-bottom:10px;
+  display:block;
+}
+.project-card .tag{
+  display:inline-block;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#ffe5d1;
+  color:#ff7f27;
+  font-size:.85em;
+  margin-bottom:8px;
+}
+.project-card .btn{
+  margin-top:8px;
+  background:#ff7f27;
+  color:#fff;
+  border:none;
+  border-radius:8px;
+  padding:8px 12px;
+  cursor:pointer;
+}
+.project-card .btn:hover{ background:#e66e1a; }
