@@ -1,7 +1,7 @@
 // year
 document.getElementById('y')?.textContent = new Date().getFullYear();
 
-// toggle detalii servicii
+// toggle detalii
 document.querySelectorAll('[data-toggle]').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     const sel = btn.getAttribute('data-toggle');
@@ -14,12 +14,10 @@ document.querySelectorAll('[data-toggle]').forEach(btn=>{
 
 // back to top
 const toTop = document.getElementById('toTop');
-window.addEventListener('scroll', ()=>{
-  toTop.style.display = window.scrollY > 220 ? 'block' : 'none';
-});
+window.addEventListener('scroll', ()=>{ toTop.style.display = window.scrollY > 220 ? 'block' : 'none'; });
 toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior:'smooth'}));
 
-// mailto form
+// mailto
 function openMail(e){
   e.preventDefault();
   const nume = document.getElementById('nume').value.trim();
