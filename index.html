@@ -1,95 +1,159 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AdPulse - Marketing Digital</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AdPulse — Marketing Digital</title>
+  <meta name="description" content="Social media, Google Ads (basic), content & landing pages.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-    <div class="logo">AdPulse</div>
+<header class="hdr">
+  <div class="container nav">
+    <div class="brand"><span class="dot"></span> AdPulse</div>
     <nav>
-        <a href="#home">Acasă</a>
-        <a href="#servicii">Servicii</a>
-        <a href="#proiecte">Proiecte</a>
-        <a href="#contact">Contact</a>
+      <a href="#servicii">Servicii</a>
+      <a href="#proiecte">Proiecte</a>
+      <a class="btn cta" href="#contact">Cere ofertă</a>
     </nav>
+  </div>
 </header>
 
-<section id="home" class="hero">
-    <h1>Creștem afacerea ta online</h1>
-    <p>Marketing digital, campanii Google Ads și social media management.</p>
-    <button class="cta" onclick="scrollToSection('contact')">Solicită ofertă</button>
-</section>
-
-<section id="servicii" class="services">
-    <h2>Serviciile Noastre</h2>
-    <div class="service-card">
-        <h3>Google Ads</h3>
-        <p>Campanii optimizate pentru rezultate maxime.</p>
-        <button onclick="showDetails('ads')">Detalii</button>
-        <div class="details" id="details-ads">Setare, monitorizare și optimizare campanii.</div>
+<main>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="container">
+      <span class="badge">📈 Social Media • Google Ads • Content</span>
+      <h1>Creștem vizibil și măsurabil ceea ce contează.</h1>
+      <p class="sub">Landing pages rapide, reclame bine țintite și conținut care arată profesionist. Totul măsurat în GA4.</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">Solicită o propunere</a>
+        <a class="btn ghost" href="#proiecte">Vezi proiecte</a>
+      </div>
     </div>
-    <div class="service-card">
-        <h3>Social Media</h3>
-        <p>Creăm conținut atractiv și postări regulate.</p>
-        <button onclick="showDetails('social')">Detalii</button>
-        <div class="details" id="details-social">Gestionare conturi Facebook, Instagram, LinkedIn.</div>
+  </section>
+
+  <!-- SERVICII -->
+  <section id="servicii" class="section">
+    <div class="container">
+      <h2>Servicii</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop" alt="Setup Google Ads">
+          <div class="card-body">
+            <h3>Google Ads (basic)</h3>
+            <p>Search/Display, cuvinte cheie, extensii, rapoarte simple și optimizare săptămânală.</p>
+            <button class="btn tiny" data-toggle="#ads">Detalii</button>
+            <div class="reveal" id="ads">Structură campanii pe obiective, negative, urmărire conversii.</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1200&auto=format&fit=crop" alt="Social Media Management">
+          <div class="card-body">
+            <h3>Social Media</h3>
+            <p>Calendar lunar, vizual + copy, șabloane Canva, publicare și raportare reach/engagement.</p>
+            <button class="btn tiny" data-toggle="#sm">Detalii</button>
+            <div class="reveal" id="sm">Facebook, Instagram, LinkedIn. Test A/B pe creativ și copy.</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop" alt="Landing page">
+          <div class="card-body">
+            <h3>Landing Pages</h3>
+            <p>HTML/CSS/JS, structură clară, CTA vizibil, scor Lighthouse 90+, tracking GA4.</p>
+            <button class="btn tiny" data-toggle="#lp">Detalii</button>
+            <div class="reveal" id="lp">Secțiuni încredere (testimoniale/FAQ), formulare și follow-up.</div>
+          </div>
+        </article>
+      </div>
     </div>
-    <div class="service-card">
-        <h3>SEO</h3>
-        <p>Optimizăm site-ul pentru a urca în Google.</p>
-        <button onclick="showDetails('seo')">Detalii</button>
-        <div class="details" id="details-seo">Analiză, cuvinte cheie, link building.</div>
+  </section>
+
+  <!-- PROIECTE -->
+  <section id="proiecte" class="section">
+    <div class="container">
+      <h2>Proiecte demonstrative</h2>
+      <p class="sub">Linkurile pot fi înlocuite cu exemple reale (GitHub Pages / PDF / Google Sheets).</p>
+
+      <div class="grid projects">
+        <article class="card proj">
+          <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1200&auto=format&fit=crop" alt="Dashboard Ads">
+          <div class="card-body">
+            <span class="tag">Google Ads</span>
+            <h3>Magazin online — campanie Search + Display</h3>
+            <p>Structură pe grupuri de anunțuri, negative, extensii sitelink/callout. Raport săptămânal.</p>
+            <div class="row">
+              <a class="btn tiny" href="#" onclick="alert('Pune link spre raportul tău demo (Sheets/PDF).');return false;">Raport demo</a>
+              <a class="btn tiny ghost" href="#" onclick="alert('Pune link spre lista de cuvinte cheie.');return false;">Keywords</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <img src="https://images.unsplash.com/photo-1529336953121-c6ae529b5d0f?q=80&w=1200&auto=format&fit=crop" alt="Website pe laptop">
+          <div class="card-body">
+            <span class="tag">Landing</span>
+            <h3>Landing „lead gen” — conversie formular</h3>
+            <p>Page layout clar, CTA sticky, elemente de încredere și evenimente GA4 configurate.</p>
+            <div class="row">
+              <a class="btn tiny" href="#" onclick="alert('Link spre landing publicat.');return false;">Deschide</a>
+              <a class="btn tiny ghost" href="#" onclick="alert('Link spre Figma/Canva.');return false;">Design</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card proj">
+          <img src="https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop" alt="Social dashboard">
+          <div class="card-body">
+            <span class="tag">Content</span>
+            <h3>Calendar Social — 30 postări/lună</h3>
+            <p>Template grafic + copy scurt, CTA, hashtag-uri. Export CSV/Sheets, organizat pe săptămâni.</p>
+            <div class="row">
+              <a class="btn tiny" href="#" onclick="alert('Link spre Google Sheet.');return false;">Calendar</a>
+              <a class="btn tiny ghost" href="#" onclick="alert('Link spre pachet imagini.');return false;">Kit vizual</a>
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
-</section>
-<section id="proiecte" class="projects">
-  <h2>Proiecte Realizate</h2>
+  </section>
 
-  <div class="project-card">
-    <span class="tag">Google Ads</span>
-    <img
-      src="https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1200&auto=format&fit=crop"
-      alt="Dashboard Google Ads">
-    <p><strong>Campanie Google Ads pentru magazin online</strong></p>
-    <p>Setare Search + Display, structură pe cuvinte cheie, extensii, raport săptămânal.</p>
-    <button class="btn" onclick="alert('Aici poți pune link spre un PDF/Google Sheet demo de raport.')">Vezi raport demo</button>
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <div class="contact">
+        <form class="form" onsubmit="openMail(event)">
+          <input type="text" id="nume" placeholder="Nume" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <textarea id="msg" rows="5" placeholder="Mesajul tău" required></textarea>
+          <button class="btn primary" type="submit">Trimite</button>
+        </form>
+        <div class="info">
+          <p><strong>Email:</strong> tomita.pirvu01@gmail.com</p>
+          <p><strong>Telefon:</strong> 0784 479 445</p>
+          <p><strong>Locație:</strong> Brașov</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr">
+  <div class="container ftr-in">
+    <div>© <span id="y"></span> AdPulse • Brașov</div>
+    <div class="sm">
+      <a href="#" onclick="alert('Adaugă link GitHub.');return false;">GitHub</a>
+      <a href="#" onclick="alert('Adaugă link LinkedIn.');return false;">LinkedIn</a>
+    </div>
   </div>
+</footer>
 
-  <div class="project-card">
-    <span class="tag">Website + Social</span>
-    <img
-      src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
-      alt="Website pe laptop">
-    <p><strong>Website + pagini social media pentru o firmă locală</strong></p>
-    <p>Landing modern (HTML/CSS/JS), cover & postări pentru Facebook/Instagram în Canva.</p>
-    <button class="btn" onclick="alert('Aici vei pune linkul către site/landing sau un Figma/Canva public.')">Vezi pagina</button>
-  </div>
-
-  <div class="project-card">
-    <span class="tag">Content</span>
-    <img
-      src="https://images.unsplash.com/photo-1494173853739-c21f58b16055?q=80&w=1200&auto=format&fit=crop"
-      alt="Plan de conținut social media">
-    <p><strong>Calendar de conținut (demo) – 30 de postări/lună</strong></p>
-    <p>Template grafic + copy scurt, CTA și hashtag-uri. Export CSV/Sheets.</p>
-    <button class="btn" onclick="alert('Pui link spre un Google Sheet/CSV cu calendarul de conținut demo.')">Vezi calendar</button>
-  </div>
-</section>
-
-<section id="contact" class="contact">
-    <h2>Contactează-ne</h2>
-    <form>
-        <input type="text" placeholder="Nume" required>
-        <input type="email" placeholder="Email" required>
-        <textarea placeholder="Mesajul tău" required></textarea>
-        <button type="submit">Trimite</button>
-    </form>
-</section>
-
-<button id="scrollTop" onclick="scrollToTop()">↑ Sus</button>
+<button id="toTop" aria-label="Înapoi sus">↑</button>
 
 <script src="script.js"></script>
 </body>
